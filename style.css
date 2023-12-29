@@ -26,20 +26,34 @@ body{
     text-align: center;
     position: absolute;
     top: 50%;
-    animation: animate-message 2s ease-in-out 4s forwards;
+    animation: animate-message 2s ease-in-out 6s forwards;
     opacity: 0;
+    text-shadow: 10px 5px 15px white;
 }
 
-.year-letter-1,.year-letter-2,.year-letter-3
+.year-letter-1,.year-letter-3
 {
     color: lavender;
+}
+.year-letter-2{
+    color: lavender;
+    animation: letter-color 1s ease-in-out 6s forwards;
+}
+
+@keyframes letter-color {
+    0%{
+        color: lavender;
+    }
+    100%{
+        color: sandybrown;
+    }
 }
 
 .old{
     color: sandybrown;
     position: absolute;
     top: 0%;
-    animation: animate-last-letter-old 2s ease-in-out 3s forwards;
+    animation: animate-last-letter-old 2.5s ease-in-out 4s forwards;
     margin-left: -80px;
 }
 
@@ -65,7 +79,151 @@ body{
     color: hotpink;
     position: absolute;
     right: -120px;
-    animation: animate-last-letter-new 2s ease-in-out 2s forwards;
+    animation: animate-last-letter-new 5s ease-in-out 1.5s forwards;
+}
+
+.balloon{
+    width: 100px;
+    height: 120px;
+    border-radius: 50%;
+    background:linear-gradient(white,blue);
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    margin-top: -290px;
+    animation: animate-balloon 5s ease-in-out 1.5s forwards;
+    opacity: 0;
+}
+
+.balloon::after{
+    content: '';
+    width: 4px;
+    height: 100px;
+    background-color: lavender;
+    position: absolute;
+    left: 50%;
+    margin-left: -2px;
+    bottom: -100px;
+}
+
+.balloon::before{
+    content: '';
+    border-style: solid;
+    border-width: 0 10px 20px 10px;
+    border-color: transparent transparent blueviolet transparent;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    margin-left: -10px;
+}
+
+.firework-effects {
+    position: relative;
+    opacity: 0;
+    animation: show_fireworks 2s ease-in-out 5s forwards;
+}
+
+@keyframes show_fireworks {
+    0% {
+        opacity: 0;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.crackers{
+    position: absolute;
+    width: 4px;
+    height: 80px;
+    transform-origin: 50% 100%;
+    overflow: hidden;
+}
+
+.crackers::before{
+    content: '';
+    background-color: gold;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    animation: fire 1.7s ease-in-out infinite;
+}
+
+@keyframes fire {
+    0%{
+        top: 100%;
+    }
+    25%{
+        top: 50%;
+    }
+    50%{
+        top: -25px;
+    }
+    75%{
+        top: -50%;
+    }
+    100%{
+        top: -50%;
+    }
+}
+
+.crackers:nth-child(1){
+    transform: rotate(0deg) translateY(-15px);
+}
+.crackers:nth-child(2){
+    transform: rotate(30deg) translateY(-15px);
+}
+.crackers:nth-child(3){
+    transform: rotate(60deg) translateY(-15px);
+}
+.crackers:nth-child(4){
+    transform: rotate(90deg) translateY(-15px);
+}
+.crackers:nth-child(5){
+    transform: rotate(120deg) translateY(-15px);
+}
+.crackers:nth-child(6){
+    transform: rotate(150deg) translateY(-15px);
+}
+.crackers:nth-child(7){
+    transform: rotate(180deg) translateY(-15px);
+}
+.crackers:nth-child(8){
+    transform: rotate(210deg) translateY(-15px);
+}
+.crackers:nth-child(9){
+    transform: rotate(240deg) translateY(-15px);
+}
+.crackers:nth-child(10){
+    transform: rotate(270deg) translateY(-15px);
+}
+.crackers:nth-child(11){
+    transform: rotate(300deg) translateY(-15px);
+}
+.crackers:nth-child(12){
+    transform: rotate(330deg) translateY(-15px);
+}
+
+#firework {
+    left: 25%;
+    top: 50%;
+    transform: scale(1);
+}
+
+#firework1{
+    left: 50%;
+    top: 70%;
+    transform: scale(0.5);
+}
+
+#firework2{
+    left: 90%;
+    top: 20%;
+    transform: scale(1.5);
 }
 
 @keyframes animate-message {
@@ -100,5 +258,26 @@ body{
     }
     100%{
         right: 500px;
+    }
+}
+
+@keyframes animate-balloon {
+    0%{
+        opacity: 100%;
+        right: -120px;
+    }
+    40%{
+        opacity: 100%;
+        right: 375px;
+    }
+    50%{
+        opacity: 100%;
+        right: 500px;
+        top: 50%;
+    }
+    100%{
+        opacity: 100%;
+        right: 500px;
+        top: -200%;
     }
 }

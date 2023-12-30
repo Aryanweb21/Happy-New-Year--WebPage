@@ -10,17 +10,20 @@
     transition: all 100ms ease-in;
 }
 
+html{
+    font-size: 62.5%;
+}
+
 body{
     background-color: #000;
     overflow: hidden;
     height: 100vh;
-
 }
 
 .message{
     width: 100%;
     font-family: "Bilbo Swash Caps",cursive;
-    font-size: 100px;
+    font-size: 10rem;
     font-weight: bolder;
     color: paleturquoise;
     text-align: center;
@@ -28,7 +31,7 @@ body{
     top: 50%;
     animation: animate-message 2s ease-in-out 6s forwards;
     opacity: 0;
-    text-shadow: 10px 5px 15px white;
+    text-shadow: 1rem 0.5rem 1.5rem white;
 }
 
 .year-letter-1,.year-letter-3
@@ -54,67 +57,67 @@ body{
     position: absolute;
     top: 0%;
     animation: animate-last-letter-old 2.5s ease-in-out 4s forwards;
-    margin-left: -80px;
+    margin-left: -8rem;
 }
 
 .year{
     position: absolute;
-    top: 300px;
+    top: 30rem;
     width: 100%;
     text-align: center;
 }
 
 .year > span{
-    font-size: 190px;
+    font-size: 19rem;
     font-weight: bold;
     font-family:"Poppins",sans-serif;
-    letter-spacing: -10px;
+    letter-spacing: -1rem;
 }
 
 .year-initials{
-    margin-right: 100px;
+    margin-right: 10rem;
 }
 
 .new-year-letter{
     color: hotpink;
     position: absolute;
-    right: -120px;
+    right: -12rem;
     animation: animate-last-letter-new 5s ease-in-out 1.5s forwards;
 }
 
 .balloon{
-    width: 100px;
-    height: 120px;
+    width: 10rem;
+    height: 12rem;
     border-radius: 50%;
     background:linear-gradient(white,blue);
     position: absolute;
     top: 50%;
     right: 0%;
-    margin-top: -290px;
+    margin-top: -29rem;
     animation: animate-balloon 5s ease-in-out 1.5s forwards;
     opacity: 0;
 }
 
 .balloon::after{
     content: '';
-    width: 4px;
-    height: 100px;
+    width: 0.4rem;
+    height: 10rem;
     background-color: lavender;
     position: absolute;
     left: 50%;
-    margin-left: -2px;
-    bottom: -100px;
+    margin-left: -0.2rem;
+    bottom: -10rem;
 }
 
 .balloon::before{
     content: '';
     border-style: solid;
-    border-width: 0 10px 20px 10px;
+    border-width: 0 1rem 2rem 1rem;
     border-color: transparent transparent blueviolet transparent;
     position: absolute;
     left: 50%;
-    bottom: -10px;
-    margin-left: -10px;
+    bottom: -1rem;
+    margin-left: -1rem;
 }
 
 .firework-effects {
@@ -137,8 +140,8 @@ body{
 
 .crackers{
     position: absolute;
-    width: 4px;
-    height: 80px;
+    width: 0.4rem;
+    height: 8rem;
     transform-origin: 50% 100%;
     overflow: hidden;
 }
@@ -146,7 +149,7 @@ body{
 .crackers::before{
     content: '';
     background-color: gold;
-    height: 40px;
+    height: 4rem;
     position: absolute;
     right: 0;
     left: 0;
@@ -161,7 +164,7 @@ body{
         top: 50%;
     }
     50%{
-        top: -25px;
+        top: -25%;
     }
     75%{
         top: -50%;
@@ -172,40 +175,40 @@ body{
 }
 
 .crackers:nth-child(1){
-    transform: rotate(0deg) translateY(-15px);
+    transform: rotate(0deg) translateY(-1.5rem);
 }
 .crackers:nth-child(2){
-    transform: rotate(30deg) translateY(-15px);
+    transform: rotate(30deg) translateY(-1.5rem);
 }
 .crackers:nth-child(3){
-    transform: rotate(60deg) translateY(-15px);
+    transform: rotate(60deg) translateY(-1.5rem);
 }
 .crackers:nth-child(4){
-    transform: rotate(90deg) translateY(-15px);
+    transform: rotate(90deg) translateY(-1.5rem);
 }
 .crackers:nth-child(5){
-    transform: rotate(120deg) translateY(-15px);
+    transform: rotate(120deg) translateY(-1.5rem);
 }
 .crackers:nth-child(6){
-    transform: rotate(150deg) translateY(-15px);
+    transform: rotate(150deg) translateY(-1.5rem);
 }
 .crackers:nth-child(7){
-    transform: rotate(180deg) translateY(-15px);
+    transform: rotate(180deg) translateY(-1.5rem);
 }
 .crackers:nth-child(8){
-    transform: rotate(210deg) translateY(-15px);
+    transform: rotate(210deg) translateY(-1.5rem);
 }
 .crackers:nth-child(9){
-    transform: rotate(240deg) translateY(-15px);
+    transform: rotate(240deg) translateY(-1.5rem);
 }
 .crackers:nth-child(10){
-    transform: rotate(270deg) translateY(-15px);
+    transform: rotate(270deg) translateY(-1.5rem);
 }
 .crackers:nth-child(11){
-    transform: rotate(300deg) translateY(-15px);
+    transform: rotate(300deg) translateY(-1.5rem);
 }
 .crackers:nth-child(12){
-    transform: rotate(330deg) translateY(-15px);
+    transform: rotate(330deg) translateY(-1.5rem);
 }
 
 #firework {
@@ -233,7 +236,7 @@ body{
     }
     100%{
         opacity: 1;
-        margin-top: -200px;
+        margin-top: -20rem;
     }
 }
 
@@ -248,36 +251,143 @@ body{
 
 @keyframes animate-last-letter-new {
     0%{
-        right: -120px;
+        right: -12rem;
     }
     40%{
-        right: 375px;
+        right: 37.5rem;
     }
     90%{
-        right: 375px;
+        right: 37.5rem;
     }
     100%{
-        right: 500px;
+        right: 50rem;
     }
 }
 
 @keyframes animate-balloon {
     0%{
         opacity: 100%;
-        right: -120px;
+        right: -12rem;
     }
     40%{
         opacity: 100%;
-        right: 375px;
+        right: 37.5rem;
     }
     50%{
         opacity: 100%;
-        right: 500px;
+        right: 50rem;
         top: 50%;
     }
     100%{
         opacity: 100%;
-        right: 500px;
+        right: 50rem;
         top: -200%;
+    }
+}
+
+
+/* now creating the web-page mobile-compatible or compatible with all types of screens */
+
+@media (max-width:1080px) {
+    .message{
+        font-size: 9rem;
+    }
+    .year > span{
+        font-size: 17.5rem;
+    }
+}
+
+@media (max-width:998px) {
+    .message{
+        font-size: 8rem;
+    }
+    .year > span{
+        font-size: 16rem;
+    }
+}
+
+@media (max-width:800px) {
+    @keyframes animate-last-letter-new {
+        0%{
+            right: -12rem;
+        }
+        40%{
+            right: 19rem;
+        }
+        90%{
+            right: 19rem;
+        }
+        100%{
+            right: 13.8rem
+        }
+    }
+    @keyframes animate-balloon {
+        0%{
+            opacity: 100%;
+            right: -12rem;
+        }
+        40%{
+            opacity: 100%;
+            right: 19rem;
+        }
+        50%{
+            opacity: 100%;
+            right: 19rem;
+            top: 50%;
+        }
+        55%{
+            right: 13rem;
+        }
+        100%{
+            opacity: 100%;
+            right: 13rem;
+            top: -200%;
+        }
+    }
+}
+
+@media (max-width:500px) {
+    .message{
+        font-size: 6rem;
+    }
+    .year > span{
+        font-size: 13rem;
+    }
+    @keyframes animate-last-letter-new {
+        0%{
+            right: -12rem;
+        }
+        40%{
+            right: 15rem;
+        }
+        90%{
+            right: 15rem;
+        }
+        100%{
+            right: 6rem
+        }
+    }
+    @keyframes animate-balloon {
+        0%{
+            opacity: 100%;
+            right: -12rem;
+        }
+        40%{
+            opacity: 100%;
+            right: 15rem;
+        }
+        50%{
+            opacity: 100%;
+            right: 15rem;
+            top: 50%;
+        }
+        55%{
+            right: 6rem;
+        }
+        100%{
+            opacity: 100%;
+            right: 6rem;
+            top: -200%;
+        }
     }
 }
